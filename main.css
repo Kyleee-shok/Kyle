@@ -1,0 +1,492 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #fad96e;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+}
+
+.navbar {
+    padding: 30px;
+    grid-column: 1/11;
+    background-color: rgb(10, 9, 9);
+
+    #menu {
+        display: none;
+    }
+
+    ul {
+        list-style-type: none;
+        font-family: 'Vollkorn SC', sans-serif;
+        display: flex;
+        float: right;
+        font-size: 30px;
+    }
+
+    #logo {
+        padding: 0px 0px 0px 60px;
+        font-size: 35px;
+        float: left;
+        transition: ease-in-out 0.5s;
+        font-family: 'Aboreto', sans-serif;
+    }
+
+    li {
+        padding-inline: 50px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #f8f8f6;
+    }
+}
+
+.img-section {
+    grid-column: 1/4;
+    padding: 60px 0px 45px 120px;
+    text-align: center;
+
+    img {
+        width: 120%;
+        border-radius: 50%;
+        transition: ease-in-out 0.8s;
+    }
+
+    img:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+        cursor: pointer;
+    }
+}
+
+.text-section {
+    grid-column: 4/11;
+    padding: 150px 0px 45px 260px;
+    color: rgb(7, 6, 6);
+
+    ul {
+        list-style-type: none;
+        font-size: 35px;
+    }
+
+    li:nth-child(4) {
+        font-family: 'Vollkorn', serif;
+        padding: 80px 0px 0px 0px;
+    }
+
+    p {
+        font-size: 30px;
+        text-align: left;
+        line-height: 1.5;
+        font-family: 'Times New Roman', Times, serif; /* Changed to match Contact content */
+    }
+
+    a {
+        color: rgb(12, 7, 7);
+        text-decoration: none;
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
+
+.contact-content {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 100%;
+
+    .intro {
+        font-family: 'Times New Roman', Times, serif; /* Changed to match logo font */
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    .navbar {
+        ul {
+            font-size: 25px;
+        }
+
+        li {
+            padding-inline: 20px;
+        }
+
+        #logo {
+            font-size: 35px;
+        }
+    }
+
+    .img-section {
+        padding: 80px 0px 0px 50px;
+
+        img {
+            width: 110%;
+        }
+    }
+
+    .text-section {
+        padding: 120px 0px 0px 150px;
+
+        ul {
+            font-size: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .navbar {
+        ul {
+            font-size: 25px;
+        }
+
+        li {
+            padding-inline: 13px;
+        }
+
+        #logo {
+            font-size: 32px;
+        }
+    }
+
+    .img-section {
+        padding: 100px 0px 0px 50px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .text-section {
+        padding: 120px 0px 0px 100px;
+
+        ul {
+            font-size: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        ul {
+            font-size: 23px;
+        }
+
+        li {
+            padding-inline: 10px;
+        }
+
+        #logo {
+            padding: 0px 0px 0px 20px;
+            font-size: 30px;
+        }
+    }
+
+    .img-section {
+        padding: 110px 0px 0px 50px;
+
+        img {
+            width: 110%;
+        }
+    }
+
+    .text-section {
+        padding: 120px 0px 0px 80px;
+
+        ul {
+            font-size: 25px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 760px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0b0c0e;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        border-radius: 5px;
+        width: 150px;
+    }
+
+    .nav-links.show {
+        display: flex;
+        font-size: 15px;
+    }
+
+    .navbar {
+        ul {
+            display: none;
+        }
+
+        #menu {
+            display: block;
+            color: white;
+            float: right;
+            font-size: 20px;
+        }
+
+        #logo {
+            padding: 0px 0px 0px 10px;
+            font-size: 30px;
+        }
+    }
+
+    .img-section {
+        grid-column: 1/11;
+        padding: 10px;
+
+        img {
+            width: 30%;
+        }
+    }
+
+    .text-section {
+        grid-column: 1/11;
+        padding: 5px 0px 0px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        ul {
+            font-size: 28px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+
+    .contact-content {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #070708;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        border-radius: 5px;
+        width: 150px;
+    }
+
+    .nav-links.show {
+        display: flex;
+        font-size: 15px;
+    }
+
+    .navbar {
+        ul {
+            display: none;
+        }
+
+        #menu {
+            display: block;
+            color: #fcfbf9;
+            float: right;
+            font-size: 20px;
+        }
+
+        #logo {
+            padding: 0px 0px 0px 10px;
+            font-size: 30px;
+        }
+    }
+
+    .img-section {
+        grid-column: 1/11;
+        padding: 10px;
+
+        img {
+            width: 40%;
+        }
+    }
+
+    .text-section {
+        grid-column: 1/11;
+        padding: 20px 0px 0px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        ul {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0F2573;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        border-radius: 5px;
+        width: 150px;
+    }
+
+    .nav-links.show {
+        display: flex;
+        font-size: 15px;
+    }
+
+    .navbar {
+        ul {
+            display: none;
+        }
+
+        #menu {
+            display: block;
+            color: white;
+            float: right;
+            font-size: 20px;
+        }
+
+        #logo {
+            padding: 0px;
+            font-size: 25px;
+        }
+    }
+
+    .img-section {
+        grid-column: 1/11;
+        padding: 10px;
+
+        img {
+            width: 50%;
+        }
+    }
+
+    .text-section {
+        grid-column: 1/11;
+        padding: 10px 0px 0px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        ul {
+            font-size: 21px;
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0F2573;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        border-radius: 5px;
+        width: 120px;
+    }
+
+    .nav-links.show {
+        display: flex;
+        font-size: 11px;
+    }
+
+    .navbar {
+        ul {
+            display: none;
+        }
+
+        #menu {
+            display: block;
+            color: white;
+            float: right;
+            font-size: 20px;
+        }
+
+        #logo {
+            padding: 0px;
+            font-size: 22px;
+        }
+    }
+
+    .img-section {
+        grid-column: 1/11;
+        padding: 20px 0px 0px 0px;
+
+        img {
+            width: 50%;
+        }
+    }
+
+    .text-section {
+        grid-column: 1/11;
+        padding: 50px 0px 0px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        ul {
+            font-size: 17px;
+        }
+    }
+}
+
+.text-section p {
+    font-size: 25px;
+}
+
+@media screen and (max-width: 1200px) {
+    .text-section p {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .text-section p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .text-section p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .text-section p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .text-section p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .text-section p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .text-section p {
+        font-size: 10px;
+    }
+}
